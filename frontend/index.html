@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Organic chia seeds</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Top bar — text comes from js/store.js -->
+    <div class="announce" data-announcement></div>
+
+    <header class="wrap nav">
+      <a class="logo" href="index.html" data-brand></a>
+      <nav class="nav-links">
+        <a class="active" href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="profile.html">My Profile</a>
+        <a href="orders.html">My Orders</a>
+        <button type="button" class="btn-ghost" data-open-cart>
+          Cart <span class="cart-count" data-cart-count>0</span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- LANDING HERO -->
+    <section class="wrap hero">
+      <div>
+        <p class="eyebrow">Organic · Sealed pack · Pesticide-free</p>
+        <h1 data-hero-title></h1>
+        <p data-hero-text></p>
+        <div class="chips">
+          <span class="chip">Premium packing</span>
+          <span class="chip">No pesticides</span>
+          <span class="chip">Kitchen-ready</span>
+        </div>
+        <div class="btn-row">
+          <a class="btn" href="shop.html">Shop chia seeds</a>
+          <a class="btn-ghost" href="#why">Why us</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <p class="eyebrow" style="color: #d7e5db">The pouch</p>
+        <h2 style="color: #fffaf2">Sealed for freshness</h2>
+        <p>
+          Food-grade packing that keeps chia dry, clean, and ready to soak.
+          Change this text in <code>index.html</code>.
+        </p>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section class="section alt" id="why">
+      <div class="wrap">
+        <p class="eyebrow">Why Seal & Seed</p>
+        <h2>Simple standards. Premium pack.</h2>
+        <div class="grid-3" style="margin-top: 20px">
+          <div class="panel">
+            <h3>Organic chia</h3>
+            <p>Grown without pesticides. Edit this box if your farm story is different.</p>
+          </div>
+          <div class="panel">
+            <h3>Sealed packing</h3>
+            <p>Zip pouch, food-grade film. Put your real pack photos here later.</p>
+          </div>
+          <div class="panel">
+            <h3>Daily kitchen use</h3>
+            <p>Soak, pudding, smoothies, roti. Clean seeds, no flavour dust.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PRODUCT — filled by JavaScript from STORE.products -->
+    <section class="section">
+      <div class="wrap">
+        <p class="eyebrow">Best seller</p>
+        <h2>Start with the 500 g pouch</h2>
+        <p>The featured pack is the one you mark in <a href="admin.html">Admin</a>.</p>
+        <div data-featured></div>
+      </div>
+    </section>
+
+    <!-- HOW TO USE -->
+    <section class="section alt">
+      <div class="wrap">
+        <p class="eyebrow">How to use</p>
+        <h2>Three easy ways</h2>
+        <div class="grid-3" style="margin-top: 20px">
+          <div class="panel">
+            <h3>Soak</h3>
+            <p>1 spoon chia + 3 spoons water. Wait 10 minutes.</p>
+          </div>
+          <div class="panel">
+            <h3>Pudding</h3>
+            <p>Mix with milk at night. Eat cold in the morning.</p>
+          </div>
+          <div class="panel">
+            <h3>Smoothie</h3>
+            <p>Blend a spoon into banana or mango smoothie.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="wrap faq">
+        <p class="eyebrow">FAQ</p>
+        <h2>Common questions</h2>
+        <details open>
+          <summary>Are these pesticide-free?</summary>
+          <p>Yes — only write this if your certificates match the batch you ship. Put cert details on this page when you have them.</p>
+        </details>
+        <details>
+          <summary>How do I store the pouch?</summary>
+          <p>Keep it sealed, dry, and away from sunlight. Use a clean dry spoon.</p>
+        </details>
+        <details>
+          <summary>Can I order more than one size?</summary>
+          <p>Yes. Open Shop, add 250 g, 500 g, or 1 kg to the same cart.</p>
+        </details>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap footer-grid">
+        <div>
+          <strong data-brand></strong>
+          <p data-tagline></p>
+        </div>
+        <div>
+          <a data-email></a><br />
+          <a data-phone></a>
+        </div>
+        <p>© <span data-year></span> · <a href="admin.html">Admin</a></p>
+      </div>
+    </footer>
+
+    <!-- CART (same on both pages) -->
+    <div class="backdrop" data-backdrop data-close-cart></div>
+    <aside class="cart" data-cart>
+      <div class="cart-head">
+        <strong>Your cart</strong>
+        <button type="button" class="btn-ghost" data-close-cart>Close</button>
+      </div>
+      <div class="cart-list" data-cart-list></div>
+      <div class="cart-foot">
+        <div class="card-row">
+          <span>Total</span>
+          <strong data-cart-total>₹0</strong>
+        </div>
+        <p class="note">This is a front-end demo. Connect Shopify checkout later.</p>
+        <a class="btn" href="shop.html">Continue shopping</a>
+      </div>
+    </aside>
+
+    <script src="js/store.js"></script>
+  </body>
+</html>

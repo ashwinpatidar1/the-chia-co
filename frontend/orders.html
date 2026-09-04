@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Orders</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="account-page">
+    <div class="orders-container">
+
+      <div class="account-navigation">
+        <a href="index.html">Home</a>
+        <a href="profile.html">My Profile</a>
+      </div>
+
+      <div class="orders-card">
+        <h1>My Orders</h1>
+
+        <p id="ordersMessage"></p>
+
+        <table class="orders-table">
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Total Amount</th>
+              <th>Order Status</th>
+              <th>Payment Status</th>
+              <th>Order Date</th>
+            </tr>
+          </thead>
+
+          <tbody id="ordersTableBody"></tbody>
+        </table>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="js/orders.js"></script>
+</body>
+</html>

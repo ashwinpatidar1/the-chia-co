@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="account-page">
+      <div class="account-container">
+        <div class="account-navigation">
+          <a href="index.html">Home</a>
+          <a href="orders.html">My Orders</a>
+        </div>
+
+        <div class="account-card">
+          <h1>My Profile</h1>
+          <p>Manage your personal details and delivery address.</p>
+
+          <form id="profileForm" class="account-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" readonly />
+
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" />
+
+            <label for="address">Address</label>
+            <textarea id="address"></textarea>
+
+            <button type="submit">Save Changes</button>
+
+            <p id="profileMessage"></p>
+          </form>
+
+          <button id="logoutButton">Logout</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/profile.js"></script>
+  </body>
+</html>

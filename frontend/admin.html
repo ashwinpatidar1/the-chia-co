@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="admin-body">
+    <!-- LOGIN — shown first -->
+    <section class="login-wrap" data-login>
+      <form class="login-box" data-login-form>
+        <p class="eyebrow">Admin</p>
+        <h1>Sign in</h1>
+        <p>Change the username and password in <code>js/store.js</code> (<code>adminUser</code> and <code>adminPassword</code>).</p>
+        <label>
+          Username
+          <input type="text" name="user" autocomplete="username" required />
+        </label>
+        <label>
+          Password
+          <input type="password" name="pass" autocomplete="current-password" required />
+        </label>
+        <p class="error" data-login-error hidden></p>
+        <button class="btn" type="submit">Log in</button>
+        <p class="note">Default: <code>admin</code> / <code>chia123</code></p>
+        <a href="index.html">Back to shop</a>
+      </form>
+    </section>
+
+    <!-- DASHBOARD — shown after login -->
+    <div data-dashboard hidden>
+      <header class="wrap nav">
+        <a class="logo" href="index.html" data-brand></a>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <button type="button" class="btn-ghost" data-logout>Log out</button>
+        </nav>
+      </header>
+
+      <section class="wrap shop-head">
+        <p class="eyebrow">Admin</p>
+        <h1>Products</h1>
+        <p>Add, edit, or remove packs. Changes show on Home and Shop in this browser.</p>
+      </section>
+
+      <section class="wrap admin-layout">
+        <form class="panel admin-form" data-product-form>
+          <h2 data-form-title>Add product</h2>
+          <input type="hidden" name="id" />
+
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Organic Chia Seeds" required />
+          </label>
+          <label>
+            Size
+            <input type="text" name="size" placeholder="500 g" required />
+          </label>
+          <label>
+            Price (₹)
+            <input type="number" name="price" min="0" step="1" placeholder="449" required />
+          </label>
+          <label>
+            Short description
+            <textarea name="blurb" rows="3" placeholder="Sealed zipper pouch."></textarea>
+          </label>
+          
+          <label>
+            upload a photo
+            <input type="file" name="imageFile" accept="image/*" />
+          </label>
+          <img class="admin-preview" data-preview alt="Preview" hidden />
+          <label class="check">
+            <input type="checkbox" name="featured" />
+            Show as featured on the home page
+          </label>
+          <div class="btn-row">
+            <button class="btn" type="submit">Save product</button>
+            <button class="btn-ghost" type="button" data-cancel-edit hidden>Cancel edit</button>
+          </div>
+          <p class="error" data-form-error hidden></p>
+        </form>
+
+        <div>
+          <div class="admin-toolbar">
+            <h2>Current products</h2>
+          </div>
+          <div class="admin-list" data-admin-list></div>
+        </div>
+      </section>
+    </div>
+
+    <script src="js/store.js"></script>
+    <script src="js/admin.js"></script>
+  </body>
+</html>

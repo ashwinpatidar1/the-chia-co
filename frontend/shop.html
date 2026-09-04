@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="announce" data-announcement></div>
+
+    <header class="wrap nav">
+      <a class="logo" href="index.html" data-brand></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a class="active" href="shop.html">Shop</a>
+        <button type="button" class="btn-ghost" data-open-cart>
+          Cart <span class="cart-count" data-cart-count>0</span>
+        </button>
+      </nav>
+    </header>
+
+    <section class="wrap shop-head">
+      <p class="eyebrow">Shop</p>
+      <h1>Organic chia seeds</h1>
+      <p>
+        Pick a pack size. Change products in <a href="admin.html">Admin</a>.
+      </p>
+    </section>
+
+    <!-- Product grid is built from STORE.products -->
+    <section class="wrap shop-grid" data-shop-grid></section>
+
+    <footer>
+      <div class="wrap footer-grid">
+        <div>
+          <strong data-brand></strong>
+          <p data-tagline></p>
+        </div>
+        <div>
+          <a data-email></a><br />
+          <a data-phone></a>
+        </div>
+        <p>© <span data-year></span> · <a href="admin.html">Admin</a></p>
+      </div>
+    </footer>
+
+    <div class="backdrop" data-backdrop data-close-cart></div>
+    <aside class="cart" data-cart>
+      <div class="cart-head">
+        <strong>Your cart</strong>
+        <button type="button" class="btn-ghost" data-close-cart>Close</button>
+      </div>
+      <div class="cart-list" data-cart-list></div>
+      <div class="cart-foot">
+        <div class="card-row">
+          <span>Total</span>
+          <strong data-cart-total>₹0</strong>
+        </div>
+        <p class="note">This is a front-end demo. Connect Shopify checkout later.</p>
+        <button type="button" class="btn" data-close-cart>Keep shopping</button>
+      </div>
+    </aside>
+
+    <script src="js/store.js"></script>
+  </body>
+</html>
