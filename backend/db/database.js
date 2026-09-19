@@ -1,21 +1,18 @@
-const mysql = require("mysql2");
+const admin = require("firebase-admin");
 
+if (!admin.apps.length) {
+  if (!process.env.FIREBASE_SERVICE_ACCOUNT) {
+    throw new Error("FIREBASE_SERVICE_ACCOUNT is required");
+  }
 
-const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "@Ashwin12",
-    database: "gami_co_db"
-});
+  admin.initializeApp({
+    credential: admin.credential.cert(
+      JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT),
+    ),
+  });
+}
 
-db.connect((err) => {
-    if (err) {
-        console.log("Database connection failed!");
-        console.log(err.message);
-        return;
-    }
-
-    console.log("MySQL connected successfully!");
-});
+const db = admin.firestore();
+db.admin = admin;
 
 module.exports = db;
